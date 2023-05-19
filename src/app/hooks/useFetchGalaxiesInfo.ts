@@ -5,9 +5,11 @@ export const COMPLETED_STATUS = "COMPLETED"
 export const LOADING_STATUS = "LOADING"
 export const ERROR_STATUS = "ERROR"
 
+type RequestStatusType = typeof COMPLETED_STATUS | typeof LOADING_STATUS | typeof ERROR_STATUS
+
 export const useFetchGalaxiesInfo = () => {
 
-  const [requestStatus, setRequestStatus] = useState(LOADING_STATUS)
+  const [requestStatus, setRequestStatus] = useState<RequestStatusType>(LOADING_STATUS)
   const [galaxies, setGalaxies] = useState([])
 
   useEffect(() => {
