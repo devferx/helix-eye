@@ -1,9 +1,10 @@
 import express from 'express';
 import { config } from './config';
-import { template } from './render/template';
 import { render } from './render';
 
 const app = express();
+
+app.use(express.static("dist"))
 
 app.get("*", (req, res) => {
   res.send(render(req.url));
