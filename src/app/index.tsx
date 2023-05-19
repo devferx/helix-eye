@@ -7,9 +7,12 @@ import './assets/favicon.ico'
 
 const container = document.getElementById('app');
 
+const initialProps = window.__INITIAL_PROPS__;
+console.log(initialProps);
+
 hydrateRoot(
   container,
   <BrowserRouter>
-    <App />
+    <App {...initialProps} />
   </BrowserRouter>
 )
