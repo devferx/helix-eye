@@ -15,8 +15,7 @@ export const template = (html: string) => {
     </head>
 
     <body>
-      ${html}
-      <div id="app"></div>
+      <div id="app">${html}</div>
     </body>
 
     </html>
